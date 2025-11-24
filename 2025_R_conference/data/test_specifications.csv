@@ -1,0 +1,3 @@
+﻿parameter,mean,tolerance,lower_bound,upper_bound
+Pmax,800.0,200.0,600.0,1000.0
+Td,1.2,0.2,1.0,1.4

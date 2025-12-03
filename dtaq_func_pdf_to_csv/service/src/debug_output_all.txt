@@ -1,0 +1,20 @@
+Debugging c:\Users\msi\Desktop\workspace\055_湲고뭹??consulting\dtaq_platform\dtaq_func_pdf_to_csv\sample_data\?좉턿_test_1-min.pdf
+--- Page 1 ---
+Text repr: '?곸엯?좊룄???뺣젹?먭? ?깆쟻??      2吏以?踰덉㎏\n 64641 2B 2018??08 1621 16??3B\n| 16 1\n (?뚯냽) LIG NEX1 ?앹궛2?      ?깅챸 理쒗솉??  ay\n(RET1\n(?섏텞) LIGNEX! ?묒궛?덉쭏 18     ?깅챸) ?좎긽??  rely\n?뺤씤??nAs) 援?갑湲곗닠?덉쭏??      (?깅챸) 842    (2)   |\n?밴린 ?쒗솴                        ee\n|\n1. ?뺣젹 ?먭?               7\nORI FIEHO 95,00 ~ 905.00 | 100.00\n援?諛⑷낵 ?숈뿰 援?짬&\nAGENCY FOR DEFENSE DEVELOPMENT                           ,\n'
+Keyword '?먭???ぉ' NOT found
+Normalized Header: ['?곸엯?좊룄???뺣젹?먭? ?깆쟻??, '2吏以?踰덉㎏', '', '']
+Is Exam Table: False
+--- Page 2 ---
+Text repr: '?μ엯 ?좊룄???쒗뿕 ?깆쟻??       8??以?2踰덉㎏\n      2. ?ㅽ대툕 ?먭?\n??痢≪젙媛믪? ?먭?耳?대툝 ???컪(0.9 QS ?ы븿?쒕떎.             |\n??n3. 諛곗꽑 ?먭?\n226 - PGND               1000.00 ~ 2400.00 | ??2200.00\n                           PGND - 020              470,00 ~ 000.00\n22N - PGND                 480.00 ~ 600.00             550.00\nPGND - 22N                400.00 ~ 4000.00           3100.00\n22P - 22N                 1000.00 ~ 9000.00           5700.00\n22N - 22P             _짜 490.00 ~ 630.00            580.00\n4. ?좊룄??湲곕낯?깅뒫 ?먭?\n(?? ?좊룄?쒖뼱?μ튂 ?먭?\n?먯쟾?덉젙?붿＜?뚯닔[12]| 100.00      95.00 ~ 105.00        100.06\n(?? ?듭떊 ?먭?\n      000, 0<11, 0x22, eee ,0<0?? OxEE, OxFF\n= 媛                  000 Ox11 Ox22 0x33 0x44 0횞55 0x66 0x77                  ?뺤긽\n-                  0x88 0x99 OxAA OxBB OxCC OxDD OxEE OxFF\n'
+Keyword '?먭???ぉ' NOT found
+Normalized Header: ['?μ엯 ?좊룄???쒗뿕 ?깆쟻??, '8??以?2踰덉㎏', '']
+Is Exam Table: False
+--- Page 3 ---
+Text repr: 'HQ ?좊룄???쒗뿕 ?깆쟻??        8??以?3踰덉㎏\n:     4. ?좊룄??湲곕낯?깅뒫 ?먭? (怨꾩냽)\n(?? ?좊룄???먯껜 ?먭?\n洹몄? 1\nA\nmez    i aot een oe 9 + 1\nee ee Se ee ee Se\noon ee oe eee ee ee PSS\n?댁궛?좏샇 |\n=              ??At\n(2) ?꾨궇濡쒓렇 ?좏샇 ?먭?         |\n?꾨궇濡쒓렇\n|  ?좏샇 ?먭?                   :\n'
+Keyword '?먭???ぉ' NOT found
+Normalized Header: ['HQ ?좊룄???쒗뿕 ?깆쟻??, '8??以?3踰덉㎏', '']
+Is Exam Table: False
+--- Page 4 ---
+Text repr: '?μ엯 ?좊룄??Ale ?깆쟻??       8??以?4踰덉㎏\n4. ?좊룄??湲곕낯?깅뒫 ?먭? (怨꾩냽)\n(?? 媛뺤젣?몄감 ?먭?\n 湲곗?媛?060] | ?덉슜 踰붿쐞[069] | 痢≪젙媛?000]\n吏쒓퀬 See See BS\nS28 Ee Sa Ss es al\n5. 理쒕? 異붿쟻瑜??먭?                                       |\n| 湲곗?媛?060] | HS 踰붿쐞[460] | 痢≪젙媛?000]\n(?곗씠 | me | aw\n6. 怨좎갑 臾명꽦媛??먭?\n 湲곗?媛?069] | ?덉슜踰붿쐞069] | 痢≪젙媛?060]\n7. ?됯컖?좎? ?먭?\n'
+Keyword '?먭???ぉ' NOT found
+Normalization failed

@@ -16,6 +16,16 @@ DEFAULT_TABLE_KEYWORDS: tuple[str, ...] = (
     "기준",
     "단위",
     "시험항목",
+    "점검항목",
+    "세부항목",
+    "기준값",
+    "허용범위",
+    "측정값",
+    "판정",
+    "아날로그 신호 점검",
+    "점검",
+    "측정",
+    "스퀴브",
     "Test Result",
     "Test Item",
     "Result",
@@ -29,6 +39,11 @@ DEFAULT_HEADER_KEYWORDS: tuple[str, ...] = (
     "항목",
     "결과",
     "판정",
+    "점검항목",
+    "세부항목",
+    "기준값",
+    "허용범위",
+    "측정값",
     "Result",
     "Item",
     "Spec",
@@ -52,7 +67,7 @@ class OCRConfig:
 
     enabled: bool = False
     lang: str = "kor+eng"
-    dpi: int = 300
+    dpi: int = 150
     poppler_path: str | None = None
     tesseract_cmd: str | None = None
     max_pages: int | None = None

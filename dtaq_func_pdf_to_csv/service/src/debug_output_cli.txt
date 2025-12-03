@@ -1,0 +1,82 @@
+Debugging c:\Users\msi\Desktop\workspace\055_湲고뭹??consulting\dtaq_platform\dtaq_func_pdf_to_csv\sample_data\?좉턿_test_1-min.pdf
+Image size: (5313, 7305)
+Tesseract CLI stdout (repr): b'\xec\x83\x81\xec\x9e\x85\xec\x9c\xa0\xeb\x8f\x84\xed\x83\x84 \xec\xa0\x95\xeb\xa0\xac\xec\xa0\x90\xea\xb2\x80 \xec\x84\xb1\xec\xa0\x81\xec\x84\x9c       2\xec\xa7\x80\xec\xa4\x911\xeb\xb2\x88\xec\xa7\xb8\r\n 64641 2B 2018\xeb\x85\x84 08 1621 16\xec\x8b\x9c 3B\r\n| 16 1\r\n (\xec\x86\x8c\xec\x86\x8d) LIG NEX1 \xec\x83\x9d\xec\x82\xb02\xed\x8c\x80      \xec\x84\xb1\xeb\xaa\x85 \xec\xb5\x9c\xed\x99\x8d\xec\x97\xb0   ay\r\n(RET1\r\n(\xec\x88\x98\xec\xb6\x95) LIGNEX! \xec\x96\x91\xec\x82\xb0\xed\x92\x88\xec\xa7\x88 18     \xec\x84\xb1\xeb\xaa\x85) \xec\x8b\xa0\xec\x83\x81\xed\x98\x84   rely\r\n\xed\x99\x95\xec\x9d\xb8\xec\x9e\x90\r\nAs) \xea\xb5\xad\xeb\xb0\xa9\xea\xb8\xb0\xec\x88\xa0\xed\x92\x88\xec\xa7\x88\xec\x9b\x90       (\xec\x84\xb1\xeb\xaa\x85) 842    (2)   |\r\n\xed\x8a\xb9\xea\xb8\xb0 \xec\x8b\x9c\xed\x99\xa9                        ee\r\n|\r\n1. \xec\xa0\x95\xeb\xa0\xac \xec\xa0\x90\xea\xb2\x80               7\r\nORI FIEHO 95,00 ~ 905.00 | 100.00\r\n\xea\xb5\xad \xeb\xb0\xa9\xea\xb3\xbc \xed\x95\x99\xec\x97\xb0 \xea\xb5\xac \xc2\xab&\r\nAGENCY FOR DEFENSE DEVELOPMENT                           ,\r\n'
+Tesseract CLI decoded (utf-8): ?곸엯?좊룄???뺣젹?먭? ?깆쟻??      2吏以?踰덉㎏
+
+ 64641 2B 2018??08 1621 16??3B
+
+| 16 1
+
+ (?뚯냽) LIG NEX1 ?앹궛2?      ?깅챸 理쒗솉??  ay
+
+(RET1
+
+(?섏텞) LIGNEX! ?묒궛?덉쭏 18     ?깅챸) ?좎긽??  rely
+
+?뺤씤??
+As) 援?갑湲곗닠?덉쭏??      (?깅챸) 842    (2)   |
+
+?밴린 ?쒗솴                        ee
+
+|
+
+1. ?뺣젹 ?먭?               7
+
+ORI FIEHO 95,00 ~ 905.00 | 100.00
+
+援?諛⑷낵 ?숈뿰 援?짬&
+
+AGENCY FOR DEFENSE DEVELOPMENT                           ,
+
+
+--------------------
+Raw OCR Text:
+?곸엯?좊룄???뺣젹?먭? ?깆쟻??      2吏以?踰덉㎏
+
+ 64641 2B 2018??08 1621 16??3B
+
+| 16 1
+
+ (?뚯냽) LIG NEX1 ?앹궛2?      ?깅챸 理쒗솉??  ay
+
+(RET1
+
+(?섏텞) LIGNEX! ?묒궛?덉쭏 18     ?깅챸) ?좎긽??  rely
+
+?뺤씤??
+As) 援?갑湲곗닠?덉쭏??      (?깅챸) 842    (2)   |
+
+?밴린 ?쒗솴                        ee
+
+|
+
+1. ?뺣젹 ?먭?               7
+
+ORI FIEHO 95,00 ~ 905.00 | 100.00
+
+援?諛⑷낵 ?숈뿰 援?짬&
+
+AGENCY FOR DEFENSE DEVELOPMENT                           ,
+
+
+--------------------
+Parsed Rows:
+['?곸엯?좊룄???뺣젹?먭? ?깆쟻??, '2吏以?踰덉㎏']
+['64641 2B 2018??08 1621 16??3B']
+['| 16 1']
+['(?뚯냽) LIG NEX1 ?앹궛2?', '?깅챸 理쒗솉??, 'ay']
+['(RET1']
+['(?섏텞) LIGNEX! ?묒궛?덉쭏 18', '?깅챸) ?좎긽??, 'rely']
+['?뺤씤??]
+['As) 援?갑湲곗닠?덉쭏??, '(?깅챸) 842', '(2)', '|']
+['?밴린 ?쒗솴', 'ee']
+['|']
+['1. ?뺣젹 ?먭?', '7']
+['ORI FIEHO 95,00 ~ 905.00 | 100.00']
+['援?諛⑷낵 ?숈뿰 援?짬&']
+['AGENCY FOR DEFENSE DEVELOPMENT', ',']
+--------------------
+Normalized Header: ['?곸엯?좊룄???뺣젹?먭? ?깆쟻??, '2吏以?踰덉㎏', '', '']
+Is Exam Table: False
+Mapped Header: ['?곸엯?좊룄???뺣젹?먭? ?깆쟻??, '2吏以?踰덉㎏', '', '']
+First Mapped Row: ['64641 2B 2018??08 1621 16??3B', '', '', '']

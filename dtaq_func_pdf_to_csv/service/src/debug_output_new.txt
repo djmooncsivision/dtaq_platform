@@ -1,0 +1,20 @@
+Debugging c:\Users\msi\Desktop\workspace\055_湲고뭹??consulting\dtaq_platform\dtaq_func_pdf_to_csv\sample_data\?좉턿_test_1-min.pdf
+--- Page 1 ---
+Text repr: '?곸엯?좊룄???뺣젹?먭? ?깆쟻??      2吏以?踰덉㎏\r\n 64641 2B 2018??08 1621 16??3B\r\n| 16 1\r\n (?뚯냽) LIG NEX1 ?앹궛2?      ?깅챸 理쒗솉??  ay\r\n(RET1\r\n(?섏텞) LIGNEX! ?묒궛?덉쭏 18     ?깅챸) ?좎긽??  rely\r\n?뺤씤??r\nAs) 援?갑湲곗닠?덉쭏??      (?깅챸) 842    (2)   |\r\n?밴린 ?쒗솴                        ee\r\n|\r\n1. ?뺣젹 ?먭?               7\r\nORI FIEHO 95,00 ~ 905.00 | 100.00\r\n援?諛⑷낵 ?숈뿰 援?짬&\r\nAGENCY FOR DEFENSE DEVELOPMENT                           ,\r\n'
+Keyword '?먭???ぉ' NOT found
+Normalized Header: ['?곸엯?좊룄???뺣젹?먭? ?깆쟻??, '2吏以?踰덉㎏', '', '']
+Is Exam Table: False
+--- Page 2 ---
+Text repr: '?μ엯 ?좊룄???쒗뿕 ?깆쟻??       8??以?2踰덉㎏\r\n      2. ?ㅽ대툕 ?먭?\r\n??痢≪젙媛믪? ?먭?耳?대툝 ???컪(0.9 QS ?ы븿?쒕떎.             |\r\n??r\n3. 諛곗꽑 ?먭?\r\n226 - PGND               1000.00 ~ 2400.00 | ??2200.00\r\n                           PGND - 020              470,00 ~ 000.00\r\n22N - PGND                 480.00 ~ 600.00             550.00\r\nPGND - 22N                400.00 ~ 4000.00           3100.00\r\n22P - 22N                 1000.00 ~ 9000.00           5700.00\r\n22N - 22P             _짜 490.00 ~ 630.00            580.00\r\n4. ?좊룄??湲곕낯?깅뒫 ?먭?\r\n(?? ?좊룄?쒖뼱?μ튂 ?먭?\r\n?먯쟾?덉젙?붿＜?뚯닔[12]| 100.00      95.00 ~ 105.00        100.06\r\n(?? ?듭떊 ?먭?\r\n      000, 0<11, 0x22, eee ,0<0?? OxEE, OxFF\r\n= 媛                  000 Ox11 Ox22 0x33 0x44 0횞55 0x66 0x77                  ?뺤긽\r\n-                  0x88 0x99 OxAA OxBB OxCC OxDD OxEE OxFF\r\n'
+Keyword '?먭???ぉ' NOT found
+Normalized Header: ['?μ엯 ?좊룄???쒗뿕 ?깆쟻??, '8??以?2踰덉㎏', '']
+Is Exam Table: False
+--- Page 3 ---
+Text repr: 'HQ ?좊룄???쒗뿕 ?깆쟻??        8??以?3踰덉㎏\r\n:     4. ?좊룄??湲곕낯?깅뒫 ?먭? (怨꾩냽)\r\n(?? ?좊룄???먯껜 ?먭?\r\n洹몄? 1\r\nA\r\nmez    i aot een oe 9 + 1\r\nee ee Se ee ee Se\r\noon ee oe eee ee ee PSS\r\n?댁궛?좏샇 |\r\n=              ??At\r\n(2) ?꾨궇濡쒓렇 ?좏샇 ?먭?         |\r\n?꾨궇濡쒓렇\r\n|  ?좏샇 ?먭?                   :\r\n'
+Keyword '?먭???ぉ' NOT found
+Normalized Header: ['HQ ?좊룄???쒗뿕 ?깆쟻??, '8??以?3踰덉㎏', '']
+Is Exam Table: False
+--- Page 4 ---
+Text repr: '?μ엯 ?좊룄??Ale ?깆쟻??       8??以?4踰덉㎏\r\n4. ?좊룄??湲곕낯?깅뒫 ?먭? (怨꾩냽)\r\n(?? 媛뺤젣?몄감 ?먭?\r\n 湲곗?媛?060] | ?덉슜 踰붿쐞[069] | 痢≪젙媛?000]\r\n吏쒓퀬 See See BS\r\nS28 Ee Sa Ss es al\r\n5. 理쒕? 異붿쟻瑜??먭?                                       |\r\n| 湲곗?媛?060] | HS 踰붿쐞[460] | 痢≪젙媛?000]\r\n(?곗씠 | me | aw\r\n6. 怨좎갑 臾명꽦媛??먭?\r\n 湲곗?媛?069] | ?덉슜踰붿쐞069] | 痢≪젙媛?060]\r\n7. ?됯컖?좎? ?먭?\r\n'
+Keyword '?먭???ぉ' NOT found
+Normalization failed

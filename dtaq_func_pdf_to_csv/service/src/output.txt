@@ -1,0 +1,6 @@
+[WARNING] No exam tables detected in 신궁_test_1-min.pdf
+[WARNING] No exam tables detected in 신궁_test_2-min.pdf
+[WARNING] No exam tables detected in 신궁_test_3-min.pdf
+[WARNING] No exam tables detected in 신궁_test_4-min.pdf
+[WARNING] No exam tables detected in 신궁_test_5-min.pdf
+[INFO] Converted 5 PDFs and produced 0 CSV files under c:\Users\msi\Desktop\workspace\055_기품원_consulting\dtaq_platform\dtaq_func_pdf_to_csv\test_output

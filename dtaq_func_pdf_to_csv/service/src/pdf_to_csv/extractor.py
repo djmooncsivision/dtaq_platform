@@ -6,6 +6,9 @@ from __future__ import annotations
 
 import logging
 import io
+import os
+import subprocess
+import tempfile
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence, Tuple, Set
 
@@ -351,9 +354,10 @@ class PDFTableExtractor:
                     else base_image.rotate(normalized_rotation, expand=True)
                 )
 
-                text = pytesseract.image_to_string(
-                    rotated_image, lang=cfg.lang, config="--psm 6"
-                )
+                # text = pytesseract.image_to_string(
+                #     rotated_image, lang=cfg.lang, config="--psm 6"
+                # )
+                text = self._run_tesseract(rotated_image, lang=cfg.lang, config="--psm 6")
                 rows = parse_ocr_text_block(text)
                 if not rows:
                     continue
@@ -365,6 +369,9 @@ class PDFTableExtractor:
                 header, data_rows = normalized
                 if not self._is_exam_table(header, data_rows):
                     continue
+                
+                # Apply schema mapping
+                header, data_rows = self._map_to_schema(header, data_rows, page_idx)
 
                 signature = self._table_signature(header, data_rows)
                 if signature in seen_signatures:
@@ -386,3 +393,123 @@ class PDFTableExtractor:
                 )
 
         return extracted
+
+    def _map_to_schema(
+        self, header: List[str], rows: List[List[str]], page_idx: int
+    ) -> Tuple[List[str], List[List[str]]]:
+        """
+        Map extracted columns to the target schema:
+        page, index, index_detail, criteria, range, value, result
+        """
+        target_header = ["page", "index", "index_detail", "criteria", "range", "value", "result"]
+        
+        # Identify column indices based on keywords
+        header_text = [h.replace(" ", "") for h in header]
+        
+        idx_col = -1
+        detail_col = -1
+        criteria_col = -1
+        range_col = -1
+        value_col = -1
+        result_col = -1
+
+        for i, col in enumerate(header_text):
+            if "점검항목" in col:
+                idx_col = i
+            elif "세부항목" in col:
+                detail_col = i
+            elif "기준값" in col:
+                criteria_col = i
+            elif "허용범위" in col:
+                range_col = i
+            elif "측정값" in col:
+                value_col = i
+            elif "판정" in col:
+                result_col = i
+
+        # If critical columns are missing, return original (or handle gracefully)
+        if idx_col == -1 or value_col == -1 or result_col == -1:
+            return header, rows
+
+        new_rows = []
+        for row in rows:
+            new_row = [""] * 7
+            new_row[0] = str(page_idx)
+            
+            if idx_col != -1 and idx_col < len(row):
+                new_row[1] = row[idx_col]
+            
+            if detail_col != -1 and detail_col < len(row):
+                new_row[2] = row[detail_col]
+            
+            if criteria_col != -1 and criteria_col < len(row):
+                new_row[3] = row[criteria_col]
+                
+            if range_col != -1 and range_col < len(row):
+                new_row[4] = row[range_col]
+                
+            if value_col != -1 and value_col < len(row):
+                new_row[5] = row[value_col]
+                
+            if result_col != -1 and result_col < len(row):
+                new_row[6] = row[result_col]
+            
+            new_rows.append(new_row)
+            
+        return target_header, new_rows
+
+    def _run_tesseract(self, image, lang: str, config: str) -> str:
+        """
+        Run Tesseract CLI directly to avoid encoding issues with pytesseract on Windows.
+        """
+        with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
+            tmp_path = tmp.name
+        
+        try:
+            image.save(tmp_path)
+            cmd = ["tesseract", tmp_path, "stdout", "-l", lang] + config.split()
+            
+            # Run tesseract
+            result = subprocess.run(cmd, capture_output=True)
+            
+            if result.returncode != 0:
+                self.logger.error("Tesseract failed: %s", result.stderr.decode("utf-8", errors="replace"))
+                return ""
+            
+            # Log raw bytes for debugging
+            # self.logger.info("Tesseract raw output: %r", result.stdout[:100])
+            print(f"DEBUG: Tesseract raw output: {result.stdout[:100]!r}")
+
+            # Decode stdout as UTF-8 explicitly
+            decoded = result.stdout.decode("utf-8", errors="replace")
+            print(f"DEBUG: Decoded first 100 chars: {decoded[:100]!r}")
+            
+            # Check for keywords in bytes
+            keywords = {
+                "점검항목": "점검항목".encode("utf-8"),
+                "점검": "점검".encode("utf-8"),
+                "항목": "항목".encode("utf-8"),
+                "기준": "기준".encode("utf-8"),
+                "측정": "측정".encode("utf-8"),
+                "스퀴브": "스퀴브".encode("utf-8"),
+                "판정": "판정".encode("utf-8")
+            }
+            
+            found_kws = []
+            for kw, kw_bytes in keywords.items():
+                if kw_bytes in result.stdout:
+                    found_kws.append(kw)
+            
+            print(f"DEBUG: Found keywords in bytes: {found_kws}")
+                
+            return decoded
+            
+        except Exception as e:
+            self.logger.error("Error running tesseract: %s", e)
+            return ""
+        finally:
+            if os.path.exists(tmp_path):
+                try:
+                    os.remove(tmp_path)
+                except OSError:
+                    pass

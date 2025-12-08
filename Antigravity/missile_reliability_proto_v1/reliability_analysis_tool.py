@@ -1,30 +1,17 @@
 import os
 import numpy as np
 import pandas as pd
-from pathlib import Path
-from datetime import datetime
 from data_loader import DataLoader
 from distribution_analyzer import DistributionAnalyzer
 from trend_predictor import TrendPredictor
 from visualizer import Visualizer
 
 class ReliabilityAnalysisTool:
-    def __init__(self, data_path, output_dir=None):
-        self.data_path = Path(data_path).resolve()
-        self.base_dir = self.data_path.parent
-
-        if output_dir is None:
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            output_path = self.base_dir / "analysis_results" / f"run_{timestamp}"
-        else:
-            output_path = Path(output_dir)
-            if not output_path.is_absolute():
-                output_path = self.base_dir / output_path
-
-        output_path.mkdir(parents=True, exist_ok=True)
-        self.output_dir = str(output_path)
-        self.loader = DataLoader(str(self.data_path))
-        self.visualizer = Visualizer(self.output_dir)
+    def __init__(self, data_path, output_dir="analysis_results"):
+        self.data_path = data_path
+        self.output_dir = output_dir
+        self.loader = DataLoader(data_path)
+        self.visualizer = Visualizer(output_dir)
         
     def run(self):
         print("1. Loading Data...")
@@ -146,8 +133,5 @@ class ReliabilityAnalysisTool:
             f.write(report)
 
 if __name__ == "__main__":
-    base_dir = Path(__file__).resolve().parent
-    data_path = base_dir / "sample_reliability_data.csv"
-
-    tool = ReliabilityAnalysisTool(str(data_path))
+    tool = ReliabilityAnalysisTool("c:/Antigravity/missile_reliability_proto_v1/sample_reliability_data.csv", output_dir="v0_reproduction_output")
     tool.run()

@@ -9,6 +9,6 @@ echo 잠시만 기다려주세요. 브라우저가 자동으로 열립니다.
 echo 실행을 종료하려면 이 창을 닫거나 Ctrl+C를 누르세요.
 echo.
 
-"C:\Users\SOON PARK\AppData\Local\Programs\Python\Python313\python.exe" -m streamlit run vgui3.0/app.py
+python -m streamlit run vgui3.0/app.py
 
 pause

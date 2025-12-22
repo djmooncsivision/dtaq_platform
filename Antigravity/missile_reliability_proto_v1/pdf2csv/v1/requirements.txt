@@ -1,5 +1,0 @@
-pdfplumber
-pandas
-openpyxl
-easyocr
-opencv-python-headless
